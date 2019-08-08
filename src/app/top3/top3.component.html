@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Mejores tiempos (TOP 3)</h3>
+    <div class="alert alert-gold">
+      <app-participant [participant]="getTop3()[0]" [position]="1"></app-participant>
+    </div>
+    <div class="alert alert-silver">
+      <app-participant [participant]="getTop3()[1]" [position]="2"></app-participant>
+    </div>
+    <div class="alert alert-bronze">
+      <app-participant [participant]="getTop3()[2]" [position]="3"></app-participant>
+    </div>
+  </div>
+</div>

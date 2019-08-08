@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Últimos participantes ({{getParticipants().length}} en total)</h3>
+    <div *ngFor="let participant of getParticipants()">
+      <div class="alert alert-info">
+        <app-participant [participant]="participant"></app-participant>
+      </div>
+    </div>
+  </div>
+</div>

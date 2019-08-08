@@ -1,0 +1,31 @@
+<form [formGroup]="chronometerForm" (ngSubmit)="createParticipant(chronometerForm.value)">
+  <div class="input-group input-group-lg mb-lg-5">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Nuevo participante</span>
+    </div>
+    <input #name type="text" class="form-control" id="name" formControlName="name" placeholder="Nombre.."/>
+    <div class="input-group-append">
+      <button #submit type="button" class="btn btn-outline-secondary" (click)="stopChronometer()">
+        <i class="fa fa-stop"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="text-center mt-lg-3">
+    <p *ngIf="!getCurrentParticipant()">Introduce un participante</p>
+    <div *ngIf="getCurrentParticipant()">
+      <p class="display-1">
+        <span>{{getCurrentParticipant().name|titlecase}}</span>
+      </p>
+      <div>
+        <p class="display-1">
+          {{getChronometerTime().record}}
+        </p>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="text-center" style="margin-top: 100px">
+  <img src="../../assets/Logo-Ría-de-Noia.png" width="50%"/>
+</div>
