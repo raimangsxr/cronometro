@@ -3,7 +3,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">Nuevo participante</span>
     </div>
-    <input #name type="text" class="form-control" id="name" formControlName="name" placeholder="Nombre.."/>
+    <input #name type="text" maxlength="13" class="form-control" id="name" formControlName="name" placeholder="Nombre.."/>
     <div class="input-group-append">
       <button #submit type="button" class="btn btn-outline-secondary" (click)="stopChronometer()">
         <i class="fa fa-stop"></i>
@@ -18,7 +18,7 @@
         <span>{{getCurrentParticipant().name|titlecase}}</span>
       </p>
       <div>
-        <p class="display-1">
+        <p class="display-1 font-weight-bold">
           {{getChronometerTime().record}}
         </p>
       </div>

@@ -13,7 +13,7 @@ export interface Participant {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'I Torneo Internacional de Toro Mecánico';
+  title = 'I Torneo Internacional Motero de Toro Mecánico';
   subtitle = 'XII Concentración Motera Ría de Noia';
 
   constructor() { }
